@@ -1,4 +1,4 @@
-CREATE DATABASE digital_library;
+CREATE DATABASE IF NOT EXISTS digital_library;
 USE digital_library;
 
 CREATE TABLE users (
