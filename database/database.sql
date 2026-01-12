@@ -27,5 +27,9 @@ INSERT INTO books (title, author) VALUES
 ("Kubernetes", "Mustafa Shaik"),
 ("Terraform", "Musta");
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
+--GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
+--FLUSH PRIVILEGES;
+
+CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
