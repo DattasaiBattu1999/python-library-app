@@ -103,5 +103,12 @@
   resulting in a more resilient and reliable software delivery process.
 
 
-9. Conclusion
-	This project demonstrates a production-grade DevSecOps pipeline. By integrating security tools like Trivy and SonarQube directly into the Jenkins workflow, the "Shift-Left" security approach is achieved, resulting in a more resilient and reliable software delivery process.
+## 📸 Proof of Concept
+
+### Pipeline Execution
+![Jenkins Pipeline Status](./screenshots/jenkins_img.png)
+
+### Video Demonstration
+[Click here to watch the deployment process](./screenshots/app_proof.mp4)
+
+
