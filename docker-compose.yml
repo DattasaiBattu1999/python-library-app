@@ -2,25 +2,35 @@ version: "3.8"
 
 services:
   db:
-    container_name: db_cont
-    build:
-      context: ./database
+    # container_name: db_cont
+    # build:
+      # context: ./database
+    image: dattasai1999/digital_lib:db
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=digital_library
       - "MYSQL_ROOT_HOST=%"
     ports:
       - "3306:3306"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
     volumes:
       - lib_volume:/var/lib/mysql
     networks:
       - lib_network
 
   auth_service:  
-    container_name: auth-cont
-    build: ./auth
+    # container_name: auth-cont
+    # build: ./auth
+    image: dattasai1999/digital_lib:auth
     ports:
       - "5001:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
     environment:
       - DB_HOST=db
       - DB_NAME=digital_library
@@ -32,10 +42,15 @@ services:
       - lib_network
 
   book_service:  
-    container_name: book-cont
-    build: ./book
+    # container_name: book-cont
+    # build: ./book
+    image: dattasai1999/digital_lib:book
     ports:
       - "5002:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
     environment:
       - DB_HOST=db
       - DB_NAME=digital_library
@@ -47,10 +62,15 @@ services:
       - lib_network
 
   borrow_service: 
-    container_name: borrow-cont
-    build: ./borrow
+    # container_name: borrow-cont
+    # build: ./borrow
+    image: dattasai1999/digital_lib:borrow
     ports:
       - "5003:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
     environment:
       - DB_HOST=db
       - DB_NAME=digital_library
@@ -62,10 +82,15 @@ services:
       - lib_network
 
   frontend:
-    container_name: frontend-cont
-    build: .
+    # container_name: frontend-cont
+    # build: .
+    image: dattasai1999/digital_lib:frontend
     ports:
       - "5000:5000"
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
     environment:
       - DB_HOST=db
       - AUTH_URL=http://auth_service:5000  
@@ -84,4 +109,4 @@ volumes:
 
 networks:
   lib_network:
-    driver: bridge
+    driver: overlay
