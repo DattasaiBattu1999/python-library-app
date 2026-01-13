@@ -1,0 +1,66 @@
+[Pipeline] sh
++ trivy image dattasai1999/digital_lib:db
+2026-01-13T07:14:44.571Z	[33mWARN[0m	No OS package is detected. Make sure you haven't deleted any files that contain information about the installed packages.
+2026-01-13T07:14:44.572Z	[33mWARN[0m	e.g. files under "/lib/apk/db/", "/var/lib/dpkg/" and "/var/lib/rpm"
+2026-01-13T07:14:44.572Z	[34mINFO[0m	Detected OS: oracle
+2026-01-13T07:14:44.572Z	[33mWARN[0m	This OS version is not on the EOL list: oracle 9
+2026-01-13T07:14:44.572Z	[34mINFO[0m	Detecting Oracle Linux vulnerabilities...
+2026-01-13T07:14:44.572Z	[34mINFO[0m	Number of PL dependency files: 0
+2026-01-13T07:14:44.572Z	[33mWARN[0m	This OS version is no longer supported by the distribution: oracle 9.7
+2026-01-13T07:14:44.572Z	[33mWARN[0m	The vulnerability detection may be insufficient because security updates are not provided
+
+dattasai1999/digital_lib:db (oracle 9.7)
+========================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+[Pipeline] sh
++ trivy image dattasai1999/digital_lib:auth
+2026-01-13T07:14:44.858Z	[34mINFO[0m	Detected OS: debian
+2026-01-13T07:14:44.858Z	[33mWARN[0m	This OS version is not on the EOL list: debian 13
+2026-01-13T07:14:44.858Z	[34mINFO[0m	Detecting Debian vulnerabilities...
+2026-01-13T07:14:44.858Z	[34mINFO[0m	Number of PL dependency files: 0
+2026-01-13T07:14:44.858Z	[33mWARN[0m	This OS version is no longer supported by the distribution: debian 13.1
+2026-01-13T07:14:44.858Z	[33mWARN[0m	The vulnerability detection may be insufficient because security updates are not provided
+
+dattasai1999/digital_lib:auth (debian 13.1)
+===========================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+[Pipeline] sh
++ trivy image dattasai1999/digital_lib:book
+2026-01-13T07:14:45.147Z	[34mINFO[0m	Detected OS: debian
+2026-01-13T07:14:45.147Z	[33mWARN[0m	This OS version is not on the EOL list: debian 13
+2026-01-13T07:14:45.147Z	[34mINFO[0m	Detecting Debian vulnerabilities...
+2026-01-13T07:14:45.147Z	[34mINFO[0m	Number of PL dependency files: 0
+2026-01-13T07:14:45.147Z	[33mWARN[0m	This OS version is no longer supported by the distribution: debian 13.1
+2026-01-13T07:14:45.147Z	[33mWARN[0m	The vulnerability detection may be insufficient because security updates are not provided
+
+dattasai1999/digital_lib:book (debian 13.1)
+===========================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+[Pipeline] sh
++ trivy image dattasai1999/digital_lib:borrow
+2026-01-13T07:14:45.437Z	[34mINFO[0m	Detected OS: debian
+2026-01-13T07:14:45.437Z	[33mWARN[0m	This OS version is not on the EOL list: debian 13
+2026-01-13T07:14:45.437Z	[34mINFO[0m	Detecting Debian vulnerabilities...
+2026-01-13T07:14:45.437Z	[34mINFO[0m	Number of PL dependency files: 0
+2026-01-13T07:14:45.437Z	[33mWARN[0m	This OS version is no longer supported by the distribution: debian 13.1
+2026-01-13T07:14:45.437Z	[33mWARN[0m	The vulnerability detection may be insufficient because security updates are not provided
+
+dattasai1999/digital_lib:borrow (debian 13.1)
+=============================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+[Pipeline] sh
++ trivy image dattasai1999/digital_lib:frontend
+2026-01-13T07:14:45.728Z	[34mINFO[0m	Detected OS: debian
+2026-01-13T07:14:45.728Z	[33mWARN[0m	This OS version is not on the EOL list: debian 13
+2026-01-13T07:14:45.728Z	[34mINFO[0m	Detecting Debian vulnerabilities...
+2026-01-13T07:14:45.728Z	[34mINFO[0m	Number of PL dependency files: 0
+2026-01-13T07:14:45.728Z	[33mWARN[0m	This OS version is no longer supported by the distribution: debian 13.1
+2026-01-13T07:14:45.728Z	[33mWARN[0m	The vulnerability detection may be insufficient because security updates are not provided
+
+dattasai1999/digital_lib:frontend (debian 13.1)
+===============================================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
